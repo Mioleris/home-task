@@ -1,0 +1,88 @@
+// Form
+.form-group {
+    margin-bottom: 20px;
+    input:focus {
+        outline: none;
+        border: 1px solid $purple;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .form-label {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        color: $darker-grey;
+        margin-bottom: 10px;
+    }
+    .form-text-input {
+        height: 40px;
+        background: $light-grey6;
+        border: 1px solid $light-grey5;
+        width: 100%;
+        font-size: 14px;
+        color: $darker-grey;
+        letter-spacing: 0;
+        font-style: italic;
+        padding: 0 15px;
+        border-radius: 4px;
+    }
+    .form-description-label {
+        font-size: 13px;
+        color: $light-grey4;
+    }
+    &.has-error {
+        input {
+            border-color: $red;
+        }
+        .form-description-label {
+            color: $red;
+        }
+    }
+    .form-checkbox-input {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;  
+        color: $darker-grey;
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: $light-grey6;
+            border: 1px solid $light-grey5;
+            border-radius: 2px;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .checkmark:after {
+            left: 4px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            background: $purple;
+            border-radius: 2px;
+        }
+    }
+}

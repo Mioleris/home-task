@@ -1,0 +1,27 @@
+@import './common/_variables';
+@import './common/_mixins';
+@import './common/_grid';
+@import './common/_button';
+@import './common/_form';
+@import './common/_helpers';
+@import './components/_top-menu';
+@import './components/_banner';
+@import './components/_card';
+@import './components/_get_in_touch_bar';
+@import './components/_article';
+@import './components/_client_login';
+@import './components/_footer';
+@import './components/_copyright';
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    @include border-box;
+    font-family: Open Sans;
+}
+
+body {
+    background: $main-background;
+}

@@ -1,0 +1,48 @@
+.get-in-touch-bar {
+    background: $white;
+    position: relative;
+    padding: 20px;
+    margin-top: 28px;
+    &:after {
+        position: absolute;
+        content: '';
+        height: 8px;
+        width: 100%;
+        @include gradient();
+        top: -8px;
+        left: 0;
+        right: 0;
+    }
+    h4 {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0;
+        color: $dark-grey2;
+        float: left;
+        margin: 8px 0;
+    }
+    .btn {
+        float: right;
+        min-width: 180px;
+    }
+    @media only screen and (max-width: 768px) {
+        h4 {
+            float: none;
+        }
+        .btn {
+            float: none;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    @media only screen and (max-width: 480px) {
+        h4 {
+            float: none;
+        }
+        .btn {
+            float: none;
+            display: block;
+            width: 100%;
+        }
+    }
+}

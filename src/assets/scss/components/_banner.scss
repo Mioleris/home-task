@@ -1,0 +1,46 @@
+.banner {
+    min-height: 420px;
+    @include gradient();
+    .main-title {
+        color: $white;
+        font-size: 64px;
+        font-weight: bold;
+        text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+        margin-top: 110px;
+        line-height: 74px;
+    }
+    .secondary-title {
+        margin-top: 10px;
+        color: $white;
+        font-size: 18px;
+        font-weight: normal;
+        letter-spacing: 0;
+    }
+    .banner-actions {
+        margin-top: 50px;
+        margin-bottom: 110px;
+        .btn {
+            min-width: 160px;;
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+    @media only screen and (max-width: 480px) {
+        min-height: auto;
+        .main-title {
+            font-size: 50px;
+            margin-top: 20px;
+            line-height: normal;
+        }
+        .banner-actions {
+            margin-bottom: 20px;
+            .btn {
+                display: block;
+                width: 100%;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

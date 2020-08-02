@@ -1,0 +1,83 @@
+.footer {
+    background: $light-grey7;
+    padding: 40px 0 121px 0;
+    margin-top: 40px;
+    .footer-logo {
+        margin-top: 40px;
+        > span {
+            > span {
+                font-weight: bold;
+                color: rgba(218,0,197,1);
+            }
+            font-size: 24px;
+            letter-spacing: 5px;
+            color: rgba(69,10,181,1);
+            // IE11 is not supporting background-clip so it will display text pink/purple only... need maybe image or svg.
+            @supports (background-clip: text) or (-webkit-background-clip: text) {
+                font-size: 24px;
+                letter-spacing: 5px;
+                background: $purple;
+                @include gradient();
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        > p {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0;
+            color: $dark-grey2;
+            font-weight: 600;
+        }
+    }
+    .footer-details {
+        padding-left: 20px;
+        position: relative;
+        margin-top: 40px;
+        &:after {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+        h5 {
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: $dark-grey2;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            font-size: 13px;
+            line-height: 32px;
+            letter-spacing: 0;
+            color: $dark-grey3;
+            li {
+                a {
+                    text-decoration: none;
+                    color: $dark-grey3;
+                }
+            }
+        }
+        table {
+            tr {
+                td {
+                    font-size: 13px;
+                    line-height: 19px;
+                    letter-spacing: 0;
+                    color: $dark-grey3;
+                }
+                > td:first-child {
+                    font-weight: bold;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}

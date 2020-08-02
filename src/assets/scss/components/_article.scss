@@ -1,0 +1,71 @@
+.article {
+    @include card-base();
+    .date {
+        font-size: 14px;
+        color: $darker-grey;
+        letter-spacing: 0;
+    }
+    .title {
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 0;
+        color: $dark-grey2;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+    .article-intro {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0;
+        color: $black;
+        margin-top: 20px;
+    }
+    .article-paragraph {
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0;
+        color: $darker-grey;
+        margin: 20px 0 0 0;
+    }
+    .article-quote {
+        background-color: $light-grey3;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-left: -40px;
+        padding: 40px 40px 40px 74px;
+        position: relative;
+        &:after {
+            content: '“';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: Georgia;
+            font-size: 81px;
+            line-height: 82px;
+            color: $darker-grey;
+            top: 15px;
+            left: 15px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            border-right: 20px solid $light-grey4;
+            border-bottom: 10px solid transparent;
+        }
+        .quote {
+            font-size: 14px;
+            line-height: 21px;
+            color: $dark-grey3;
+            letter-spacing: 0;
+        }
+        .author {
+            font-size: 16px;
+            letter-spacing: 0;
+            color: $dark-grey3;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    }
+}

@@ -1,0 +1,198 @@
+.top-menu {
+    height: $top-menu-height;
+    background: $white;
+    position: relative;
+    z-index: 9999;
+    .text-logo {
+        float: left;
+        font-size: 24px;
+        line-height: $top-menu-height;
+        color: $dark-grey2;
+        > span {
+            > span {
+                font-weight: bold;
+            }
+        }
+    }
+    .burger {
+        display: none;
+        position: absolute;
+        top: 21px;
+        right: 15px;
+        > div {
+            height: 5px;
+            width: 40px;
+            background: $dark-grey2;
+            margin-top: 4px;
+        }
+    }
+    ul.top-menu-nav {
+        float: right;
+        line-height: $top-menu-height;
+        > li {
+            display: inline-block;
+        }
+        > li.nav-item {
+            position: relative;
+            &:hover {
+                background: $light-grey;
+                > .top-menu-sub-nav {
+                    opacity: 1;
+                    top: 80px;
+                    visibility: visible;
+                }
+            }
+            &.has-submenu {
+                position: relative;
+                &:after {
+                    content: '';
+                    top: 39px;
+                    right: 12px;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 3px 3px 0 3px;
+                    border-color: $dark-grey transparent transparent transparent;
+                }
+            }
+            > a {
+                text-decoration: none;
+                color: $dark-grey;
+                font-size: 16px;
+                display: block;
+                padding: 0 27px;
+            }
+            > ul.top-menu-sub-nav {
+                // display: none;
+                top: 0;
+                z-index: 1;
+                position: absolute;
+                list-style-type: none;
+                border-radius: 4px;
+                background: $white;
+                padding: 0 11px;
+                width: 180px;
+                left: 50%;
+                margin-left: -90px;
+                visibility: hidden;
+                margin-top: 10px;
+                opacity: 0;
+                -webkit-transition: all .3s .1s;
+                -moz-transition: all .3s .1s;
+                  -o-transition: all .3s .1s;
+                     transition: all .3s .1s;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 8px 8px 8px;
+                    border-color: transparent transparent $white transparent;
+                    top: -8px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+                &:before {
+                    position: absolute;
+                    content: '';
+                    height: 10px;
+                    left: 0;
+                    right: 0;
+                    top: -10px;
+                }
+                > li.nav-item {
+                    line-height: normal;
+                    display: block;
+                    > a {
+                        text-decoration: none;
+                        color: $darker-grey;
+                        font-size: 13px;
+                        display: block;
+                        padding: 0 27px;
+                        border-bottom: 1px solid $light-grey2;
+                        padding: 10px 16px;
+                    }
+                    &:last-child {
+                        a {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+        .get-in-touch-btn {
+            margin-right: 25px;
+        }
+    }
+    @media screen and (max-width : 774px){
+        height: $top-menu-height;
+        .text-logo {
+            float: none;
+            font-size: 24px;
+            line-height: $top-menu-height;
+        }
+        .burger {
+            display: block;
+        }
+        ul.top-menu-nav {
+            position: absolute;
+            background: $white;
+            width: 100%;
+            left: 0;
+            right: 0;
+            &:not(.open) {
+                display: none;
+            }
+            float: none;
+            line-height: initial;
+            > li {
+                display: block;
+                text-align: center;
+                padding: 10px;
+            }
+            > li.nav-item {
+                position: relative;
+                border-bottom: 1px solid $light-grey2;
+                &.active {
+                    background: $light-grey;
+                    > .top-menu-sub-nav {
+                        display: block;
+                        top: 0;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                &.has-submenu {
+                    &:after {
+                        top: 30px;
+                    }
+                }
+                > a {
+                    text-decoration: none;
+                    color: $dark-grey;
+                    font-size: 16px;
+                    display: block;
+                    padding: 10px;
+                }
+                > ul.top-menu-sub-nav {
+                    display: none;
+                    position: relative;
+                    list-style-type: none;
+                    border-radius: 0;
+                    background: $white;
+                    padding: 0 11px;
+                    margin-top: 0;
+                    width: 100%;
+                    left: initial;
+                    margin-left: 0;
+                }
+            }
+            .get-in-touch-btn {
+                margin-right: 0;
+            }
+        }
+    }
+}

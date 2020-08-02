@@ -1,0 +1,40 @@
+.btn {
+    border: none;
+    font-size: 13px;
+    line-height: 24px;
+    padding: 8px 28px;
+    border-radius: 4px;
+    letter-spacing: 0;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &.purple-btn {
+        background: $purple;
+        color: $white;
+    }
+    &.white-btn {
+        background: $white;
+        color: $dark-grey3;
+    }
+    &.transparent-btn {
+        background: transparent;
+        color: $white;
+        border: 1px solid $white;
+    }
+    &.link-btn {
+        background: transparent;
+        font-size: 14px;
+        line-height: 24px;
+        text-decoration: underline;
+        color: $purple;
+        text-align: center;
+    }
+    &.btn-lg {
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 0;
+        padding: 9px 28px;
+    }
+}
